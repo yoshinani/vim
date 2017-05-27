@@ -1,17 +1,40 @@
 " vimの8系でバックスペースを使えるようにする
 set backspace=indent,eol,start
+" クリップボードに保存する"
+set clipboard=unnamed,autoselect
+" カーソルが何行目の何列目に置かれているかを表示する
+set ruler
+" コマンドラインに使われる画面上の行数
+set cmdheight=2
 " 文字コードをUFT-8に設定
 set fenc=utf-8
+" ステータス行に表示させる情報の指定(どこからかコピペしたので細かい意味はわかっていない)
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+" ウインドウのタイトルバーにファイルのパス情報等を表示する
+set title
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
 set noswapfile
 " 編集中のファイルが変更されたら自動で読み直す
 set autoread
+" 改行時に前の行のインデントを継続する
+set autoindent
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
+" カーソルを行頭、行末で止まらないようにする
+set whichwrap=b,s,h,l,<,>,[,]
+" コピーデータのインデントをコピーデータと統一
+set paste
+" 行番号の色"
+autocmd ColorScheme * highlight LineNr ctermfg=166
+" 全角スペースに警告
+autocmd ColorScheme * hi link TwoByteSpace Error
+autocmd VimEnter,WinEnter * let w:m_tbs = matchadd("TwoByteSpace", '　') 
+" カラースキーマの指定
+colorscheme desert
 
 " シンタックスハイライトを有効化
 syntax on
@@ -45,6 +68,8 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+" 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
+set smarttab
 
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
