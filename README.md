@@ -1,5 +1,13 @@
 # vim
 
+# Howto
+
+```
+cd ~/
+git clone git@github.com:yutanakano/vim.git
+ln -s ~/vim/.vimrc
+```
+
 # 構成
 
 |Directory|ファイル名|用途|
