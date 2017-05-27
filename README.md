@@ -3,9 +3,9 @@
 # Howto
 
 ```
-cd ~/
-git clone git@github.com:yutanakano/vim.git
-ln -s ~/vim/.vimrc
+cd ~/ && git clone git@github.com:yutanakano/vim.git
+cd ~/.vim && ln -s ~/vim/autoload
+cd ~/ && ln -s ~/vim/.vimrc
 ```
 
 # 構成
