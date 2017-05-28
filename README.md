@@ -2,10 +2,11 @@
 
 # Howto
 
+- 初回起動時に以下を実行
+
 ```
 cd ~/ && git clone git@github.com:yutanakano/vim.git
-cd ~/.vim && ln -s ~/vim/autoload
-cd ~/ && ln -s ~/vim/.vimrc
+sh ~/vim/setup.sh
 ```
 
 # 構成
