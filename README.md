@@ -1,4 +1,5 @@
 # vim
+- 個人用 兼 忘備録
 
 # Howto
 
@@ -7,6 +8,30 @@
 ```
 cd ~/ && git clone git@github.com:yutanakano/vim.git
 sh ~/vim/setup.sh
+```
+
+# pluginの導入方法
+
+- [※](https://teratail.com/questions/63742) pluginの追加は `if dein#load_state('/Users/aizawasatoshi/.vim/bundle')` のスコープ外に書きます
+    - `~/vim/autoload/init/plugin.vim`
+
+- pluginのインストール
+
+```
+:call dein#install()
+```
+
+- pluginのアップデート
+
+```
+:call dein#update()
+```
+
+- 現在インストールされているプラグイン一覧を確認
+    - Uniteプラグインが必要
+
+```
+:Unite dein
 ```
 
 # 構成
