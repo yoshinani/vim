@@ -6,7 +6,7 @@
 - 初回起動時に以下を実行
 
 ```
-cd ~/ && git clone git@github.com:yutanakano/prototype-vim.git
+cd ~/ && git clone git@github.com:yutanakano/vim.git
 sh ~/vim/setup.sh
 ```
 
